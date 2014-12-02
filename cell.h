@@ -6,23 +6,23 @@
 #include "textdisplay.h"
 #include "window.h"
 
-const int maxNeighbours = 4;
+const int maxNeighbours = 4;         // Maximum number of neighbours a cell can have 
 
 // Object definition
 class Cell {
-  int state;                         //current state of the cell
-  int prevState;                     //previous state of the cell
-  int numNeighbours;                 //number of neighbors
-  Cell *neighbours[maxNeighbours];   //pointers to neighbors
-  int r, c;                          //co-ordinates of the cell
-  TextDisplay * td;                  //pointer to the text display
+  int state;                         // Current state of the cell
+  int prevState;                     // Previous state of the cell
+  int numNeighbours;                 // Number of neighbors
+  Cell *neighbours[maxNeighbours];   // Pointers to neighbors
+  int r, c;                          // Co-ordinates of the cell
+  TextDisplay * td;                  // Pointer to the text display
 
-  // Add private members, if necessary (access to Xwindow, location in the window etc)
-  int x, y, width, height;
-  Xwindow *window;                  // Pointer to the window
+  int x, y;
+  int width, height;
+  Xwindow *window;                   // Pointer to the window
 
-  void notifyDisplay();					    //notify the TextDisplay of the change
-  void notifyWindow();              //notify the Window of the change
+  void notifyDisplay();		    // Notify the TextDisplay of the change
+  void notifyWindow();              // Notify the Window of the change
 
 public:
   Cell();                           // Default constructor
@@ -42,11 +42,11 @@ public:
    */
    void notify( const int & change);	
 
-	/*
-	 * Intended to be called by Cells to notify their neighbors
-	 * current: this cells current(new) state 
-	 * previous: this cells past state
-	 */
+  /*
+   * Intended to be called by Cells to notify their neighbors
+   * current: this cells current(new) state 
+   * previous: this cells past state
+   */
    void notify(const int & current, const int & previous); 
 };
 
