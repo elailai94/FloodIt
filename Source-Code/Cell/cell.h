@@ -1,3 +1,11 @@
+//==============================================================================
+// FloodIt
+//
+// @author: Elisha Lai
+// @description: Module for providing functions to work with Cell objects
+// @version: 1.2 03/11/2014
+//==============================================================================
+
 // Cell module (cell.h)
 
 #ifndef __CELL_H__
@@ -21,7 +29,7 @@ class Cell {
   int width, height;
   Xwindow *window;                   // Pointer to the window
 
-  void notifyDisplay();		    // Notify the TextDisplay of the change
+  void notifyDisplay();		         // Notify the TextDisplay of the change
   void notifyWindow();              // Notify the Window of the change
 
 public:
