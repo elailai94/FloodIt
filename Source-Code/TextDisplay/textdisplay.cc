@@ -3,7 +3,7 @@
 //
 // @author: Elisha Lai
 // @description: Module to provide functions to work with TextDisplay objects
-// @version: 1.0 03/12/2014
+// @version: 1.0 03/11/2014
 //=============================================================================
 
 // Textdisplay module (textdisplay.cc)
