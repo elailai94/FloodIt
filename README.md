@@ -7,3 +7,19 @@ FloodIt is a simple tile-matching puzzle game. FloodIt is written entirely in C+
 ```bash
 make
 ```
+
+### Execution
+```bash
+./flood-graphical
+```
+
+### Usage
+#### Game Commands
+- **new  n** creates a new *n* x *n* grid, where *n* >= 1. If there was already an active grid, that grid is destroyed and replaced with the new one.
+- **init** enters initialization mode. Subsequently, reads triples of integers *r c s* and sets the cell at row *r*, column *c* to state *s*. The top-left corner is row 0, column 0. The coordinates -1 -1 end initialization mode. It is possible to enter initialization mode more than once, and even while the game is running. A set of invalid co-ordinates and state will be ignored. When initialization mode ends, the board should be displayed.
+- **include f** includes the file *f*, which contains a list of cell initializations of the same form of initialization from *init*. This file doesn't have to end with the coordinates -1 -1.
+- **game g** starts a new game, with a commitment to solve the game in *g* moves or fewer, once the board has been initialized. *game* can't be called once a game has been started.
+- **switch s** switches the top-left (0,0) cell to s within a game, changes all appropriate neighbours, and then redisplays the grid.
+
+### Known Issues
+- X11 library has memory leaks.
