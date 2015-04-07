@@ -26,6 +26,7 @@ make
 - **include f** includes the file *f*, which contains a list of cell initializations of the same form of initialization from *init*. This file doesn't have to end with the coordinates -1 -1.
 - **game g** starts a new game, with a commitment to solve the game in *g* moves or fewer, once the board has been initialized. *game* can't be called once a game has been started.
 - **switch s** switches the top-left (0,0) cell to s within a game, changes all appropriate neighbours, and then redisplays the grid.
+> Note: By pressing **CTRL-D**, an end-of-file (EOF) signal terminates the game.
 
 ### Known Issues
 - X11 library has memory leaks.
