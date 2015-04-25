@@ -10,12 +10,17 @@ FloodIt is a simple tile-matching puzzle game. FloodIt is written entirely in C+
 ![FloodIt_Screenshot2](https://cloud.githubusercontent.com/assets/7763904/7017281/3a1535ae-dcc3-11e4-8a5d-1cf835225e74.png)
 
 ### Compilation
-```bash
+```Bash
 make
 ```
 
+### Clean Build
+```Bash
+make clean
+```
+
 ### Execution
-```bash
+```Bash
 ./flood-graphical
 ```
 
